@@ -36,6 +36,12 @@
                         @Html.ActionLink("Course", "Courses", "Course", new { area = "" },
                             new { @class = ViewBag.Current == "Course" ? "nav-link active" : "nav-link" })
                     </li>
+
+                    <li class="nav-item">
+                        @Html.ActionLink("Degree Plan", "Index", "DegreePlan", new { area = "" },
+                            new { @class = ViewBag.Current == "Home" ? "nav-link active" : "nav-link" })
+                    </li>
+
                     @if (Request.IsAuthenticated)
                     {
                         <li class="nav-item" data-turbolinks="false">
