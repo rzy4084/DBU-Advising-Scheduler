@@ -39,11 +39,10 @@ namespace DBU_Advising_Scheduler.Models
         [JsonProperty(PropertyName = "College of Humanities")]
         public List<string> CollegeOfHumanities { get; set; }
 
-        [JsonProperty(PropertyName = "College of Natural Science and Mathematics")]
+        [JsonProperty(PropertyName = "College of Natural Science and Mathematics Masters")]
         public List<string> MastersOfNaturalScience { get; set; }
 
         [JsonProperty(PropertyName = "Cook School of Leadership")]
         public List<string> MastersSchoolOfLeadership { get; set; }
-
     }
 }

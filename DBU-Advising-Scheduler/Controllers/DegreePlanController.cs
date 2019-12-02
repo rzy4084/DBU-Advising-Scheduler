@@ -30,20 +30,14 @@ namespace DBU_Advising_Scheduler.Controllers
         // GET: DegreePlan
         public ActionResult Index()
         {
-
             string fileName = HostingEnvironment.MapPath(@"~\degrees.json");
             Degrees degrees = JsonConvert.DeserializeObject<Degrees>(System.IO.File.ReadAllText(fileName));
 
-            foreach (string degree in degrees.CollegeOfBusiness)
-            {
-                System.Diagnostics.Debug.WriteLine(degree);
-            }
-
-
-
-
-
-            return View();
+            //foreach (string degree in degrees.CollegeOfBusiness)
+            //{
+            //    System.Diagnostics.Debug.WriteLine(degree);
+            //}
+            return View(degrees);
         }
     }
 }
