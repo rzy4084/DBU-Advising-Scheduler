@@ -12,7 +12,7 @@ using System.Web.Hosting;
 
 namespace DBU_Advising_Scheduler.Controllers
 {
-    public class DegreePlanController : Controller
+    public class DegreePlanController : BaseController
     {
 
         //public void getJsonData()
