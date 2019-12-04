@@ -1,0 +1,66 @@
+﻿@model List<Course>
+@{
+    ViewBag.Title = "Courses";
+}
+
+<h1>Courses</h1>
+
+<table>
+    <tr>
+        <th>Reporting Term</th>
+        <th>Term</th>
+        <th>Course Name</th>
+        <th>Course Number</th>
+        <th>Section</th>
+        <th>Title</th>
+        <th>Division Description</th>
+        <th>Department</th>
+        <th>Department Description</th>
+        <th>Current Status</th>
+        <th>Location</th>
+        <th>Building</th>
+        <th>Room</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Days</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Section Capacity</th>
+        <th>Faculty First Name</th>
+        <th>Faculty Last Name</th>
+        <th>Notes</th>
+        <th>Year</th>
+        <th>Start DateTime</th>
+        <th>End DateTime</th>
+    </tr>
+    @foreach (var course in Model)
+    {
+        <tr>
+            <td>@course.ReportingTerm</td>
+            <td>@course.Term</td>
+            <td>@course.CourseName</td>
+            <td>@course.CourseNumber</td>
+            <td>@course.Section</td>
+            <td>@course.Title</td>
+            <td>@course.DivisionDesc</td>
+            <td>@course.Department</td>
+            <td>@course.DepartmentDesc</td>
+            <td>@course.CurrentStatus</td>
+            <td>@course.Location</td>
+            <td>@course.Building</td>
+            <td>@course.Room</td>
+            <td>@course.StartDate</td>
+            <td>@course.EndDate</td>
+            <td>@course.Days</td>
+            <td>@course.StartTime</td>
+            <td>@course.EndTime</td>
+            <td>@course.SectionCapacity</td>
+            <td>@course.FacultyFName</td>
+            <td>@course.FacultyLName</td>
+            <td>@course.Notes</td>
+            <td>@course.Year</td>
+            <td>@course.StartDT</td>
+            <td>@course.EndDT</td>
+        </tr>
+    }
+</table>
