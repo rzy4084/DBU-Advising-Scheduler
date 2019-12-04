@@ -12,7 +12,7 @@ namespace DBU_Advising_Scheduler.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class dbu_course_listing
+    public partial class cours
     {
         public string Reporting_Term { get; set; }
         public string Term { get; set; }

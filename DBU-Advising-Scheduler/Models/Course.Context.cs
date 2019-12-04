@@ -25,6 +25,6 @@ namespace DBU_Advising_Scheduler.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<dbu_course_listing> dbu_course_listing { get; set; }
+        public virtual DbSet<cours> courses { get; set; }
     }
 }

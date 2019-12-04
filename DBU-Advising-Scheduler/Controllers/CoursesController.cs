@@ -22,16 +22,16 @@ using System.Web;
 using System.Web.Mvc;
 namespace DBU_Advising_Scheduler.Controllers
 {
-	public class Dbu_course_listingController:Controller
+	public class CoursesController:Controller
 	{
 	   private DBU_Advising_Scheduler.Models.dbuasEntities db = new DBU_Advising_Scheduler.Models.dbuasEntities();
 	   
 	     //
-        // GET: /dbu_course_listing/
+        // GET: /courses/
 
         public ActionResult Index()
         {
-            return View(db.dbu_course_listing.ToList());
+            return View(db.courses.ToList());
         }
 
         protected override void Dispose(bool disposing)

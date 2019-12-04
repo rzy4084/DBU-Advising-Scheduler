@@ -6,8 +6,8 @@
     <edmx:StorageModels>
       <Schema Namespace="dbuasModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
-warning 6002: The table/view 'def.dbuas.dbu_course_listing' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="dbu_course_listing">
+warning 6002: The table/view 'def.dbuas.courses' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="courses">
           <Key>
             <PropertyRef Name="Reporting Term" />
             <PropertyRef Name="Term" />
@@ -62,34 +62,34 @@ warning 6002: The table/view 'def.dbuas.dbu_course_listing' does not have a prim
           <Property Name="End Datetime" Type="datetime" Precision="0" Nullable="false" />
         </EntityType>
         <EntityContainer Name="dbuasModelStoreContainer">
-          <EntitySet Name="dbu_course_listing" EntityType="Self.dbu_course_listing" store:Type="Tables" store:Schema="dbuas">
+          <EntitySet Name="courses" EntityType="Self.courses" store:Type="Tables" store:Schema="dbuas">
             <DefiningQuery>SELECT
-`dbu_course_listing`.`Reporting Term`, 
-`dbu_course_listing`.`Term`, 
-`dbu_course_listing`.`Course Name`, 
-`dbu_course_listing`.`Course`, 
-`dbu_course_listing`.`Section`, 
-`dbu_course_listing`.`Title`, 
-`dbu_course_listing`.`Division Desc`, 
-`dbu_course_listing`.`Department`, 
-`dbu_course_listing`.`Department Description`, 
-`dbu_course_listing`.`Current Status`, 
-`dbu_course_listing`.`Location`, 
-`dbu_course_listing`.`Building`, 
-`dbu_course_listing`.`Room`, 
-`dbu_course_listing`.`Start Date`, 
-`dbu_course_listing`.`End Date`, 
-`dbu_course_listing`.`Days`, 
-`dbu_course_listing`.`Start Time`, 
-`dbu_course_listing`.`End Time`, 
-`dbu_course_listing`.`Section Capacity`, 
-`dbu_course_listing`.`Faculty First Name`, 
-`dbu_course_listing`.`Faculty Last Name`, 
-`dbu_course_listing`.`Notes`, 
-`dbu_course_listing`.`Year`, 
-`dbu_course_listing`.`Start Datetime`, 
-`dbu_course_listing`.`End Datetime`
-FROM `dbu_course_listing` AS `dbu_course_listing`</DefiningQuery>
+`courses`.`Reporting Term`, 
+`courses`.`Term`, 
+`courses`.`Course Name`, 
+`courses`.`Course`, 
+`courses`.`Section`, 
+`courses`.`Title`, 
+`courses`.`Division Desc`, 
+`courses`.`Department`, 
+`courses`.`Department Description`, 
+`courses`.`Current Status`, 
+`courses`.`Location`, 
+`courses`.`Building`, 
+`courses`.`Room`, 
+`courses`.`Start Date`, 
+`courses`.`End Date`, 
+`courses`.`Days`, 
+`courses`.`Start Time`, 
+`courses`.`End Time`, 
+`courses`.`Section Capacity`, 
+`courses`.`Faculty First Name`, 
+`courses`.`Faculty Last Name`, 
+`courses`.`Notes`, 
+`courses`.`Year`, 
+`courses`.`Start Datetime`, 
+`courses`.`End Datetime`
+FROM `courses` AS `courses`</DefiningQuery>
           </EntitySet>
         </EntityContainer>
       </Schema>
@@ -97,7 +97,7 @@ FROM `dbu_course_listing` AS `dbu_course_listing`</DefiningQuery>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbuasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="dbu_course_listing">
+        <EntityType Name="cours">
           <Key>
             <PropertyRef Name="Reporting_Term" />
             <PropertyRef Name="Term" />
@@ -152,7 +152,7 @@ FROM `dbu_course_listing` AS `dbu_course_listing`</DefiningQuery>
           <Property Name="End_Datetime" Type="DateTime" Nullable="false" />
         </EntityType>
         <EntityContainer Name="dbuasEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="dbu_course_listing" EntityType="Self.dbu_course_listing" />
+          <EntitySet Name="courses" EntityType="Self.cours" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -160,9 +160,9 @@ FROM `dbu_course_listing` AS `dbu_course_listing`</DefiningQuery>
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="dbuasModelStoreContainer" CdmEntityContainer="dbuasEntities">
-          <EntitySetMapping Name="dbu_course_listing">
-            <EntityTypeMapping TypeName="dbuasModel.dbu_course_listing">
-              <MappingFragment StoreEntitySet="dbu_course_listing">
+          <EntitySetMapping Name="courses">
+            <EntityTypeMapping TypeName="dbuasModel.cours">
+              <MappingFragment StoreEntitySet="courses">
                 <ScalarProperty Name="Reporting_Term" ColumnName="Reporting Term" />
                 <ScalarProperty Name="Term" ColumnName="Term" />
                 <ScalarProperty Name="Course_Name" ColumnName="Course Name" />
